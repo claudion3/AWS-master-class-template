@@ -8,12 +8,20 @@ doc: `https://docs.aws.amazon.com/cli/latest/reference/lambda/list-functions.htm
 
 **Assignment 2:**
 
-value: `?`
+value: `AWS::Serverless::Function`
 
-doc: `?`
+doc: `https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html`
 
 **Assignment 3:**
-rubbish string: `?`
+rubbish string: `Ifmmp-!IZG\`
+
+![rubbish string](img/sane-string.png)
+
+![sane string](img/return-sane-string.png)
 
 **Assignment 4:**
-total count: `?`
+total count: `1`
+
+![Latency](img/Latency.png)
+
+![count](img/number.png)
