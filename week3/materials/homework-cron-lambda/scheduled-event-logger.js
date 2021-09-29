@@ -37,15 +37,33 @@ exports.scheduledEventLoggerHandler = async () => {
 						Namespace: 'AWS/ApiGateway',
 					},
 
-					Period: 300,
+					Period: 3000000,
 					Stat: 'SampleCount',
+				},
+			},
+			{
+				Id: 'Error',
+				MetricStat: {
+					Metric: {
+						Dimensions: [
+							{
+								Name: 'ApiName',
+								Value: '4XX',
+							},
+						],
+						MetricName: 'count',
+						Namespace: 'AWS/login',
+					},
+
+					Period: 300,
+					Stat: 'Sum',
 				},
 			},
 		],
 	};
 
 	const results = await cloudwatchClient.send(new GetMetricDataCommand(params));
-	console.log('Success', results.$metadata.requestId);
+	console.log('Success', results.MetricDataResults);
 	return results;
 };
 
